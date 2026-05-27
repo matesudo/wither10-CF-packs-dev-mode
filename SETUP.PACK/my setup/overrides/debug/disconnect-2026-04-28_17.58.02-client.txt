@@ -1,0 +1,272 @@
+---- Minecraft Network Protocol Error Report ----
+// 0xBADF00D
+
+Time: 2026-04-28 17:58:02
+Description: Packet handling error
+
+java.lang.IllegalStateException: Missing element ResourceKey[minecraft:trim_material / minecraft:redstone]
+	at knot//net.minecraft.core.HolderGetter$Provider.lambda$getOrThrow$1(HolderGetter.java:39)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at knot//net.minecraft.core.HolderGetter$Provider.getOrThrow(HolderGetter.java:39)
+	at knot//net.minecraft.world.item.Item$Properties.lambda$delayedHolderComponent$0(Item.java:443)
+	at knot//net.minecraft.core.component.DataComponentInitializers$Initializer.lambda$andThen$0(DataComponentInitializers.java:120)
+	at knot//net.minecraft.core.component.DataComponentInitializers$Initializer.lambda$andThen$0(DataComponentInitializers.java:119)
+	at knot//net.minecraft.core.component.DataComponentInitializers$InitializerEntry.run(DataComponentInitializers.java:100)
+	at knot//net.minecraft.core.component.DataComponentInitializers.runInitializers(DataComponentInitializers.java:29)
+	at knot//net.minecraft.core.component.DataComponentInitializers.build(DataComponentInitializers.java:52)
+	at knot//net.minecraft.client.multiplayer.RegistryDataCollector.updateComponents(RegistryDataCollector.java:149)
+	at knot//net.minecraft.client.multiplayer.RegistryDataCollector.collectGameRegistries(RegistryDataCollector.java:171)
+	at knot//net.minecraft.client.multiplayer.ClientConfigurationPacketListenerImpl.lambda$handleConfigurationFinished$0(ClientConfigurationPacketListenerImpl.java:153)
+	at knot//net.minecraft.client.multiplayer.ClientConfigurationPacketListenerImpl.runWithResources(ClientConfigurationPacketListenerImpl.java:121)
+	at knot//net.minecraft.client.multiplayer.ClientConfigurationPacketListenerImpl.handleConfigurationFinished(ClientConfigurationPacketListenerImpl.java:153)
+	at knot//net.minecraft.network.protocol.configuration.ClientboundFinishConfigurationPacket.handle(ClientboundFinishConfigurationPacket.java:22)
+	at knot//net.minecraft.network.protocol.configuration.ClientboundFinishConfigurationPacket.handle(ClientboundFinishConfigurationPacket.java:8)
+	at knot//net.minecraft.network.PacketProcessor$ListenerAndPacket.handle(PacketProcessor.java:55)
+	at knot//net.minecraft.network.PacketProcessor.processQueuedPackets(PacketProcessor.java:38)
+	at knot//net.minecraft.client.Minecraft.runTick(Minecraft.java:1343)
+	at knot//net.minecraft.client.Minecraft.run(Minecraft.java:991)
+	at knot//net.minecraft.client.main.Main.main(Main.java:248)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:514)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:115)
+	at org.prismlauncher.EntryPoint.listen(EntryPoint.java:129)
+	at org.prismlauncher.EntryPoint.main(EntryPoint.java:70)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at knot//net.minecraft.core.HolderGetter$Provider.lambda$getOrThrow$1(HolderGetter.java:39)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at knot//net.minecraft.core.HolderGetter$Provider.getOrThrow(HolderGetter.java:39)
+	at knot//net.minecraft.world.item.Item$Properties.lambda$delayedHolderComponent$0(Item.java:443)
+	at knot//net.minecraft.core.component.DataComponentInitializers$Initializer.lambda$andThen$0(DataComponentInitializers.java:120)
+	at knot//net.minecraft.core.component.DataComponentInitializers$Initializer.lambda$andThen$0(DataComponentInitializers.java:119)
+	at knot//net.minecraft.core.component.DataComponentInitializers$InitializerEntry.run(DataComponentInitializers.java:100)
+	at knot//net.minecraft.core.component.DataComponentInitializers.runInitializers(DataComponentInitializers.java:29)
+	at knot//net.minecraft.core.component.DataComponentInitializers.build(DataComponentInitializers.java:52)
+	at knot//net.minecraft.client.multiplayer.RegistryDataCollector.updateComponents(RegistryDataCollector.java:149)
+	at knot//net.minecraft.client.multiplayer.RegistryDataCollector.collectGameRegistries(RegistryDataCollector.java:171)
+	at knot//net.minecraft.client.multiplayer.ClientConfigurationPacketListenerImpl.lambda$handleConfigurationFinished$0(ClientConfigurationPacketListenerImpl.java:153)
+	at knot//net.minecraft.client.multiplayer.ClientConfigurationPacketListenerImpl.runWithResources(ClientConfigurationPacketListenerImpl.java:121)
+
+-- Incoming Packet --
+Details:
+	Type: clientbound/minecraft:finish_configuration
+	Is Terminal: true
+	Is Skippable: false
+Stacktrace:
+	at knot//net.minecraft.network.protocol.PacketUtils.fillCrashReport(PacketUtils.java:41)
+	at knot//net.minecraft.client.multiplayer.ClientCommonPacketListenerImpl.storeDisconnectionReport(ClientCommonPacketListenerImpl.java:146)
+	at knot//net.minecraft.client.multiplayer.ClientCommonPacketListenerImpl.onPacketError(ClientCommonPacketListenerImpl.java:125)
+	at knot//net.minecraft.network.PacketProcessor$ListenerAndPacket.handle(PacketProcessor.java:60)
+	at knot//net.minecraft.network.PacketProcessor.processQueuedPackets(PacketProcessor.java:38)
+	at knot//net.minecraft.client.Minecraft.runTick(Minecraft.java:1343)
+	at knot//net.minecraft.client.Minecraft.run(Minecraft.java:991)
+	at knot//net.minecraft.client.main.Main.main(Main.java:248)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:514)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:115)
+	at org.prismlauncher.EntryPoint.listen(EntryPoint.java:129)
+	at org.prismlauncher.EntryPoint.main(EntryPoint.java:70)
+
+-- Connection --
+Details:
+	Protocol: configuration
+	Flow: CLIENTBOUND
+	Is Local: false
+	Server type: OTHER
+	Server brand: ~~NULL~~
+
+-- System Details --
+Details:
+	Minecraft Version: 26.1.2
+	Minecraft Version ID: 26.1.2
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 25.0.1, Microsoft
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Microsoft
+	Memory: 443681232 bytes (423 MiB) / 1166016512 bytes (1112 MiB) up to 4294967296 bytes (4096 MiB)
+	Memory (heap): init: 512MiB, used: 687MiB, committed: 1112MiB, max: 4096MiB
+	Memory (non-head): init: 007MiB, used: 311MiB, committed: 332MiB, max: 000MiB
+	CPUs: 8
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i5-8365U CPU @ 1.60GHz
+	Identifier: Intel64 Family 6 Model 142 Stepping 12
+	Microarchitecture: Whiskey Lake
+	Frequency (GHz): 1.90
+	Number of physical packages: 1
+	Number of physical CPUs: 4
+	Number of logical CPUs: 8
+	Graphics card #0 name: Intel(R) UHD Graphics 620
+	Graphics card #0 vendor: Intel Corporation
+	Graphics card #0 VRAM (MiB): 1024.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 31.0.101.2125
+	Memory slot #0 capacity (MiB): 4096.00
+	Memory slot #0 clockSpeed (GHz): 2.40
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MiB): 4096.00
+	Memory slot #1 clockSpeed (GHz): 2.40
+	Memory slot #1 type: DDR4
+	Virtual memory max (MiB): 9883.45
+	Virtual memory used (MiB): 8055.29
+	Swap memory total (MiB): 1943.89
+	Swap memory used (MiB): 1693.70
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 196851.64, total: 243248.00
+	Space in storage for workdir (MiB): available: 196851.64, total: 243248.00
+	JVM Flags: 3 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xms512m -Xmx4096m
+	Debug Flags: 0 total; 
+	Fabric Mods: 
+		appleskin: AppleSkin 3.0.9+mc26.1
+		cloth-config: Cloth Config v26.1 26.1.154
+			cloth-basic-math: cloth-basic-math 0.6.1
+		continuity: Continuity 3.0.1-beta.2+26.1
+		cosmetica: Cosmetica 2.0.1-26.1
+			com_twelvemonkeys_common_common-image: common-image 3.12.0
+			com_twelvemonkeys_common_common-io: common-io 3.12.0
+			com_twelvemonkeys_common_common-lang: common-lang 3.12.0
+			com_twelvemonkeys_imageio_imageio-core: imageio-core 3.12.0
+			com_twelvemonkeys_imageio_imageio-metadata: imageio-metadata 3.12.0
+			com_twelvemonkeys_imageio_imageio-webp: imageio-webp 3.12.0
+			cosmetica-core: Cosmetica Core 2.1.6+hotfix.2-26.1
+			fabric-api-base: Fabric API Base 2.0.3+ece0632347
+			fabric-resource-loader-v1: Fabric Resource Loader (v1) 2.0.9+d871b99e47
+			kupe: Kupe GUI 0.26.8-26.1
+		distanthorizons: Distant Horizons 3.0.2-b
+			fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 2.0.10+d5a053b639
+			fabric-biome-api-v1: Fabric Biome API (v1) 18.0.4+35c80edc39
+			fabric-block-api-v1: Fabric Block API (v1) 3.0.2+ec56b60139
+			fabric-block-getter-api-v2: Fabric BlockGetter API (v2) 2.0.6+ec56b60139
+			fabric-client-gametest-api-v1: Fabric Client Game Test API (v1) 5.0.14+9c21967139
+			fabric-command-api-v2: Fabric Command API (v2) 3.0.5+e2bdee7839
+			fabric-content-registries-v0: Fabric Content Registries (v0) 11.0.12+d871b99e39
+			fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 1.0.3+9f78a5a839
+			fabric-creative-tab-api-v1: Fabric Creative Tab API (v1) 5.0.10+d871b99e39
+			fabric-debug-api-v1: Fabric Debug API (v1) 1.0.1+c792624d39
+			fabric-dimensions-v1: Fabric Dimensions API (v1) 5.1.4+9cbf5da539
+			fabric-entity-events-v1: Fabric Entity Events (v1) 5.0.2+e2bdee7839
+			fabric-events-interaction-v0: Fabric Events Interaction (v0) 5.1.10+c82f046139
+			fabric-game-rule-api-v1: Fabric Game Rule API (v1) 4.0.5+d871b99e39
+			fabric-gametest-api-v1: Fabric Game Test API (v1) 4.0.13+00a1fba639
+			fabric-item-api-v1: Fabric Item API (v1) 14.1.0+9833182c39
+			fabric-key-mapping-api-v1: Fabric Key Mapping API (v1) 2.0.4+e2bdee7839
+			fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 4.0.6+a9b9c17639
+			fabric-loot-api-v3: Fabric Loot API (v3) 3.0.11+00a1fba639
+			fabric-menu-api-v1: Fabric Menu API (v1) 2.0.12+d871b99e39
+			fabric-message-api-v1: Fabric Message API (v1) 7.0.5+dae8ce3e39
+			fabric-networking-api-v1: Fabric Networking API (v1) 6.3.0+50a808ce39
+			fabric-particles-v1: Fabric Particles (v1) 5.0.14+b61fef4339
+			fabric-recipe-api-v1: Fabric Recipe API (v1) 9.0.13+be4b75ae39
+			fabric-registry-sync-v0: Fabric Registry Sync (v0) 7.0.12+b61fef4339
+			fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 6.0.1+d871b99e39
+			fabric-resource-conditions-api-v1: Fabric Resource Conditions API (v1) 6.0.5+00a1fba639
+			fabric-resource-loader-v0: Fabric Resource Loader (v0) 3.3.16+4fc5413f39
+			fabric-screen-api-v1: Fabric Screen API (v1) 5.0.1+d871b99e39
+			fabric-serialization-api-v1: Fabric Serialization API (v1) 2.0.3+11a26f3139
+			fabric-sound-api-v1: Fabric Sound API (v1) 2.0.4+11a26f3139
+			fabric-tag-api-v1: Fabric Tag API (v1) 2.0.9+11a26f3139
+			fabric-transitive-access-wideners-v1: Fabric Transitive Access Wideners (v1) 8.0.11+d871b99e39
+		dynamic_fps: Dynamic FPS 3.11.6
+			dynamic_fps_common: Dynamic FPS Common 3.11.6
+			net_lostluma_battery: battery 2.0.0
+		entity_model_features: Entity Model Features 3.1.1
+		entity_texture_features: Entity Texture Features 7.1
+		entityculling: EntityCulling 1.10.1
+			transition: TRansition 1.0.17
+			trender: TRender 1.0.12
+		fabric-api: Fabric API 0.146.1+26.1.2
+			fabric-convention-tags-v2: Fabric Convention Tags (v2) 4.4.0+f006eade4c
+			fabric-data-attachment-api-v1: Fabric Data Attachment API (v1) 2.2.4+d602a8964c
+			fabric-data-generation-api-v1: Fabric Data Generation API (v1) 24.0.18+35c80edc4c
+			fabric-model-loading-api-v1: Fabric Model Loading API (v1) 8.0.4+c80601bb4c
+			fabric-object-builder-api-v1: Fabric Object Builder API (v1) 23.0.14+b95dd56e4c
+			fabric-renderer-api-v1: Fabric Renderer API (v1) 13.0.1+c80601bb4c
+			fabric-renderer-indigo: Fabric Renderer - Indigo 8.0.3+a6be36ef4c
+			fabric-rendering-v1: Fabric Rendering (v1) 23.0.5+08c26e364c
+			fabric-transfer-api-v1: Fabric Transfer API (v1) 8.0.4+357ea7334c
+		fabric-language-kotlin: Fabric Language Kotlin 1.13.11+kotlin.2.3.21
+			org_jetbrains_kotlin_kotlin-reflect: kotlin-reflect 2.3.21
+			org_jetbrains_kotlin_kotlin-stdlib: kotlin-stdlib 2.3.21
+			org_jetbrains_kotlin_kotlin-stdlib-jdk7: kotlin-stdlib-jdk7 2.3.21
+			org_jetbrains_kotlin_kotlin-stdlib-jdk8: kotlin-stdlib-jdk8 2.3.21
+			org_jetbrains_kotlinx_atomicfu-jvm: atomicfu-jvm 0.32.1
+			org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm: kotlinx-coroutines-core-jvm 1.10.2
+			org_jetbrains_kotlinx_kotlinx-coroutines-jdk8: kotlinx-coroutines-jdk8 1.10.2
+			org_jetbrains_kotlinx_kotlinx-datetime-jvm: kotlinx-datetime-jvm 0.7.1
+			org_jetbrains_kotlinx_kotlinx-io-bytestring-jvm: kotlinx-io-bytestring-jvm 0.9.0
+			org_jetbrains_kotlinx_kotlinx-io-core-jvm: kotlinx-io-core-jvm 0.9.0
+			org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm: kotlinx-serialization-cbor-jvm 1.11.0
+			org_jetbrains_kotlinx_kotlinx-serialization-core-jvm: kotlinx-serialization-core-jvm 1.11.0
+			org_jetbrains_kotlinx_kotlinx-serialization-json-jvm: kotlinx-serialization-json-jvm 1.11.0
+		fabricloader: Fabric Loader 0.19.2
+			mixinextras: MixinExtras 0.5.4
+		ferritecore: FerriteCore 9.0.0
+		gammautils: Gamma Utils 3.0.0
+		immediatelyfast: ImmediatelyFast 1.15.2+26.1.2
+			net_lenni0451_reflect: Reflect 1.6.2
+		jade: Jade 26.0.8+fabric
+		java: OpenJDK 64-Bit Server VM 25
+		lithium: Lithium 0.24.2+mc26.1.2
+		minecraft: Minecraft 26.1.2
+		modmenu: Mod Menu 18.0.0-alpha.8
+		moreculling: More Culling 1.7.0-beta.5
+			conditional-mixin: conditional mixin 0.6.3
+			mixinsquared: MixinSquared 0.2.0
+		notenoughanimations: NotEnoughAnimations 1.12.2
+		placeholder-api: Placeholder API 3.0.0+26.1
+		reeses-sodium-options: Reese's Sodium Options 2.0.5+mc26.1.1
+		sodium: Sodium 0.8.9+mc26.1.1
+		sodium-extra: Sodium Extra 0.8.7+mc26.1.1
+		viafabricplus: ViaFabricPlus 4.5.2
+			com_github_oryxel1_cubeconverter: CubeConverter 5b4fce77c4
+			com_google_code_gson_gson: gson 2.13.2
+			com_google_errorprone_error_prone_annotations: error_prone_annotations 2.41.0
+			com_seedfinding_mc_biome: mc_biome 1.171.1
+			com_seedfinding_mc_core: mc_core 1.210.0
+			com_seedfinding_mc_math: mc_math 1.171.0
+			com_seedfinding_mc_noise: mc_noise 1.171.1
+			com_seedfinding_mc_seed: mc_seed 1.171.2
+			com_vdurmont_semver4j: semver4j 3.1.0
+			com_viaversion_mcstructs_dialog: dialog 5-3.2.2-20251210.004302-1
+			com_viaversion_mcstructs_registry: registry 5-3.2.2-SNAPSHOT
+			com_viaversion_viaaprilfools-common: viaaprilfools-common 4.2.0-20260402.183812-7
+			com_viaversion_viabackwards-common: viabackwards-common 5.9.0-20260408.100214-12
+			com_viaversion_viaversion-common: viaversion-common 5.9.0-20260409.113912-28
+			de_florianreuth_classic4j: classic4j 2.3.0
+			dev_kastle_netty_netty-transport-nethernet: netty-transport-nethernet 1.7.0
+			dev_kastle_netty_netty-transport-raknet: netty-transport-raknet 1.7.0
+			dev_kastle_webrtc_webrtc-java: webrtc-java 1.0.3
+			dev_kastle_webrtc_webrtc-java_linux-aarch64: webrtc-java 1.0.3
+			dev_kastle_webrtc_webrtc-java_linux-x86_64: webrtc-java 1.0.3
+			dev_kastle_webrtc_webrtc-java_macos-aarch64: webrtc-java 1.0.3
+			dev_kastle_webrtc_webrtc-java_windows-aarch64: webrtc-java 1.0.3
+			dev_kastle_webrtc_webrtc-java_windows-x86_64: webrtc-java 1.0.3
+			io_jsonwebtoken_jjwt-api: jjwt-api 0.13.0
+			io_jsonwebtoken_jjwt-gson: jjwt-gson 0.13.0
+			io_jsonwebtoken_jjwt-impl: jjwt-impl 0.13.0
+			net_jodah_expiringmap: expiringmap 0.5.10
+			net_lenni0451_commons_gson: gson 1.9.2
+			net_lenni0451_commons_httpclient: httpclient 1.9.2
+			net_lenni0451_mcstructs-bedrock_forms: forms 2.0.1
+			net_lenni0451_mcstructs-bedrock_text: text 2.0.1
+			net_raphimc_minecraftauth: MinecraftAuth 5.0.1-20260217.194827-4
+			net_raphimc_viabedrock: ViaBedrock 0.0.27-20260402.214449-5
+			net_raphimc_vialegacy: ViaLegacy 3.0.14
+			team_unnamed_mocha: mocha 3.0.1
+			viafabricplus-api: ViaFabricPlus API 4.5.2
+			viafabricplus-visuals: ViaFabricPlus Visuals 4.5.2
+		xaerominimap: Xaero's Minimap 25.3.11
+			xaerolib: XaeroLib 1.1.13
+		xaeroworldmap: Xaero's World Map 1.40.14
+		yet_another_config_lib_v3: YetAnotherConfigLib 3.9.2+26.1-fabric
+			org_quiltmc_parsers_gson: gson 0.2.1
+			org_quiltmc_parsers_json: json 0.2.1
+		zoomify: Zoomify 2.16.0+26.1

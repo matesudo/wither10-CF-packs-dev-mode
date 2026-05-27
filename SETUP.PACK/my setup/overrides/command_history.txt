@@ -1,0 +1,50 @@
+/pw go BANKSHOP
+/pw go bank
+/pw go arab
+/pv 2
+/sellgui
+/sell all
+/msg ArabGame bro wth
+/pv 2
+/
+/sell all
+/home
+/sell all
+/heal
+/sell all
+/home japan
+/sell all
+/kit hydra
+/sellgui
+/sell all
+/repair all
+/login yahoopass
+/survival
+/ec
+/tpa 67
+/bal
+/ec
+/tpa 67
+/ec
+/tpa 67
+/msg 67 first pay?
+/ec
+/spawn
+/msg 67 no
+/spawn
+/ec
+/home new
+/spawn
+/playtime
+/tpa ult
+/heal
+/sellgui
+/pv 1
+/pv 2
+/pv 3
+/fly
+/sellgui
+/pv 3
+/ah sell 2000000
+/kit hydra
+/pv 3
