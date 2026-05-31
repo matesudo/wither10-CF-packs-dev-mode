@@ -1,24 +1,48 @@
 # wither10-CF-packs-dev-mode
-my curseforge packs but in github:)
 
-these are my creations but ported into github for more views and more packs-
+CurseForge packs stored on GitHub for easier sharing, updates, and backups.
 
-and for easier updates and fixes
+## About
 
-not tested, stuff may not work properly, if there’s issues put them in Issues and I’ll fix ;)
+This repo holds my CurseForge packs in development mode. It makes it easier to:
 
-changelogs:
+- update packs over time
+- keep a history of changes
+- share with others
+- fix issues faster
 
-5/27 started github-
+## Packs included
 
-5/28 added NULL.PACK, POTATO.PACK, SETUP.PACK
+- `NULL.PACK`
+- `POTATO.PACK`
+- `SETUP.PACK`
+- `NOCTURN.PACK`
+- `RPG.PACK`
 
-5/29 added NOCTURN.PACK, RPG.PACK
+## Download
 
-5/29 made all my packs a downloadable .zip ;)
+Anyone can download the repo from GitHub:
 
-5/30 found out that my mid life world is saved in RPG.PACK (dont look 😭)
+- click `Code` → `Download ZIP`
+- or clone with:
+  ```bash
+  git clone https://github.com/matesudo/wither10-CF-packs-dev-mode.git
+  ```
 
-5/31 fixed some typos in README (read me ok 😊?)
+Each pack can also be downloaded separately as its own modpack ZIP, its in Releases
 
-updates coming soon 😊... maybe 💀 we only hope now-
+## Notes
+
+- Not tested yet, so things may not work properly.
+- If you find issues, open a GitHub issue and I’ll fix it.
+
+## Changelog
+
+- 5/27 started GitHub
+- 5/28 added `NULL.PACK`, `POTATO.PACK`, `SETUP.PACK`
+- 5/29 added `NOCTURN.PACK`, `RPG.PACK`
+- 5/29 made all my packs a downloadable ZIP
+- 5/30 found out my mid life world is saved in `RPG.PACK` (don’t look 😭)
+- 5/31 fixed some typos in README (read me okay 😊?)
+
+Updates coming soon 😊... maybe 💀
