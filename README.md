@@ -3,7 +3,7 @@ my curseforge packs but in github:)
 
 these are my creations but ported into github for more views and more packs-
 
-gitand for easier updates and fixes
+and for easier updates and fixes
 
 not tested, stuff may not work properly, if there’s issues put them in Issues and I’ll fix ;)
 
