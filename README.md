@@ -29,7 +29,7 @@ Anyone can download the repo from GitHub:
   git clone https://github.com/matesudo/wither10-CF-packs-dev-mode.git
   ```
 
-Each pack can also be downloaded separately as its own modpack ZIP, available in  Releases
+Each pack can also be downloaded separately as its own modpack ZIP from the Releases section.
 
 ## Notes
 
