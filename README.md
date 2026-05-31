@@ -17,4 +17,8 @@ changelogs:
 
 5/29 made all my packs a downloadable .zip ;)
 
+5/30 found out that my mid life world is saved in RPG.PACK (dont look 😭)
+
+5/31 fixed some typos in README (read me ok 😊?)
+
 updates coming soon 😊... maybe 💀 we only hope now-
