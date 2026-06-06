@@ -45,6 +45,8 @@ Each pack can also be downloaded separately as its own modpack ZIP from the Rele
 - 5/30 found out my mid life world is saved in `RPG.PACK` (don’t look 😭)
 - 5/31 fixed some typos in README (read me okay 😊?)
 - 5/31 let copilot change my README
-- 6/3  fixed not adding "-" (not a face😭)]
+- 6/3 fixed not adding "-" (not a face😭)
 - 6/3 typhoon attacked-
+- 6/3 made a new mod 🤩
+- 6/6 added the mod to github
 - Updates coming soon 😊... maybe 💀
